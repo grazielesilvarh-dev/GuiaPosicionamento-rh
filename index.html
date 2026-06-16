@@ -423,6 +423,189 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);line-height:1.8;}
 .champ-line{width:100%;height:1px;background:linear-gradient(to right,transparent,var(--champ),transparent);}
 
 @keyframes fu{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+/* ══════════════════════════════
+   MOBILE — revisão completa
+   max-width: 480px
+══════════════════════════════ */
+@media(max-width:480px){
+
+  /* ── HERO ── */
+  .hero-nav{ padding:16px 20px; }
+  .hero-nav-brand{ font-size:10px; letter-spacing:2px; }
+  .hero-nav-cta{ padding:7px 14px; font-size:10px; }
+
+  .hero-content{
+    padding:88px 20px 52px;
+    gap:36px;
+  }
+
+  .hero-badge-pill{ margin-bottom:24px; }
+  .hero-badge-text{ font-size:9px; letter-spacing:1.5px; }
+
+  .hero-gancho-pre{
+    font-size:22px; letter-spacing:-.3px;
+  }
+  .hero-gancho-main{
+    font-size:44px; letter-spacing:-2px;
+  }
+  .hero-gancho-accent{
+    font-size:38px; letter-spacing:-1px;
+  }
+  .hero-gancho-block{
+    padding:2px 12px 8px;
+  }
+
+  .hero-divisor{ margin:20px 0; }
+
+  .hero-sub-gancho{
+    font-size:14px; line-height:1.75;
+    margin-bottom:28px; max-width:100%;
+  }
+
+  .hero-price-inline{ margin-bottom:14px; }
+  .hero-price-inline .pval{ font-size:30px; }
+
+  .hero-ctas{ flex-direction:column; align-items:flex-start; gap:14px; }
+  .hero-cta-main{
+    width:100%; text-align:center;
+    padding:16px 24px; font-size:11px;
+  }
+  .hero-cta-sec{ font-size:11px; }
+
+  .hero-trust{ gap:10px; }
+  .hero-trust-item{ font-size:9px; }
+
+  /* visual / geo */
+  .hero-visual{ height:260px; }
+  .geo-circle{ width:220px; height:220px; }
+  .geo-glow{ width:180px; height:180px; }
+  .display-frame{ width:130px; border-radius:10px; padding:6px; }
+  .display-bar{ padding:0 2px 5px; }
+  .display-bar-dot{ width:4px; height:4px; }
+  .display-screen{ border-radius:5px; }
+
+  /* ── ESPELHO ── */
+  #espelho{ padding:56px 20px; }
+  #espelho h2{ font-size:24px; margin-bottom:28px; }
+  .checks{ gap:10px; }
+  .checks li{ font-size:14px; gap:10px; }
+  .checks li::before{ width:20px; height:20px; font-size:10px; }
+
+  /* ── CUSTO ── */
+  #custo{ padding:56px 20px; }
+  #custo h2{ font-size:24px; margin-bottom:28px; }
+  .custo-grid{ grid-template-columns:1fr; gap:10px; }
+  .ci{ padding:18px 16px; }
+  .ci h3{ font-size:13px; }
+  .ci p{ font-size:13px; }
+  .custo-box{ padding:24px 20px; }
+  .custo-box p{ font-size:15px; }
+
+  /* ── BENEFÍCIOS ── */
+  #beneficios{ padding:56px 20px; }
+  #beneficios h2{ font-size:24px; }
+  #beneficios .sec-top{ margin-bottom:36px; }
+  .ben-grid{ grid-template-columns:1fr; gap:0; }
+  .ben-item{ padding:22px 16px; gap:14px; }
+  .ben-num{ font-size:11px; }
+  .ben-body h3{ font-size:14px; }
+  .ben-body p{ font-size:13px; }
+
+  /* ── OFERTA ── */
+  #oferta{ padding:56px 20px; }
+  #oferta h2{ font-size:24px; margin-bottom:20px; }
+  .oferta-sub{ font-size:14px; margin-bottom:36px; }
+
+  .oi-wrap{ gap:10px; }
+  .oi{ padding:16px 14px; gap:12px; }
+  .oicon{ width:36px; height:36px; }
+  .oicon svg{ width:16px; height:16px; }
+  .oi h3{ font-size:13px; }
+  .oi p{ font-size:12px; }
+
+  /* contador */
+  #countdown-wrap{ padding:14px 12px !important; }
+  #cd-h, #cd-m, #cd-s{
+    font-size:32px !important;
+  }
+
+  .price{ margin-bottom:28px; }
+  .price-old{ font-size:12px; }
+  .price-val{ font-size:clamp(52px,14vw,72px); }
+  .price-val span{ font-size:22px; }
+  .price-tag{ font-size:9px; }
+
+  .btn-w{
+    width:100%; text-align:center;
+    padding:18px 20px; font-size:11px;
+  }
+
+  /* trust bar oferta */
+  #oferta .oferta-note{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:8px !important;
+  }
+
+  /* ── RESULTADOS ── */
+  #resultados{ padding:56px 20px; }
+  #resultados .inner{ grid-template-columns:1fr; gap:32px; }
+  .res-text h2{ font-size:24px; }
+  .results-list li{ font-size:14px; }
+
+  /* ── PARA QUEM ── */
+  #para-quem{ padding:56px 20px; }
+  #para-quem h2{ font-size:24px; }
+  .pq-grid{ grid-template-columns:1fr; gap:8px; }
+  .pq-item{ font-size:13px; padding:14px 16px; }
+
+  /* ── AUTORA ── */
+  #autora{ padding:0 20px 56px; }
+  #autora .in{
+    grid-template-columns:1fr; gap:24px; padding-top:48px;
+  }
+  .photo{ width:140px; height:182px; box-shadow:5px 5px 0 var(--champ); }
+  .author-name{ font-size:24px; }
+  .author-bio p{ font-size:14px; }
+
+  /* ── GARANTIA ── */
+  #garantia{ padding:56px 20px; }
+  #garantia h2{ font-size:22px; }
+  #garantia p{ font-size:14px; }
+
+  /* ── FECHAMENTO ── */
+  #fechamento{ padding:56px 20px; }
+  #fechamento h2{ font-size:26px; }
+  #fechamento p{ font-size:14px; }
+  .btn-cafe{
+    width:100%; text-align:center;
+    padding:18px 20px; font-size:11px;
+  }
+  .cta-g{ gap:10px; }
+
+  /* cards conteúdo */
+  .cards-grid{ grid-template-columns:1fr; gap:14px; }
+  #conteudo{ padding:56px 20px; }
+  #conteudo h2{ font-size:24px; }
+  .card{ padding:22px 18px; }
+  .card-num{ font-size:28px; }
+  .card h3{ font-size:15px; }
+}
+
+/* ── TABLET 481–768 ── */
+@media(min-width:481px) and (max-width:768px){
+  .hero-content{ padding:96px 32px 64px; gap:40px; }
+  .hero-gancho-main{ font-size:52px; }
+  .hero-gancho-accent{ font-size:44px; }
+  .hero-visual{ height:300px; }
+  .geo-circle{ width:260px; height:260px; }
+  .display-frame{ width:150px; }
+  .ben-grid{ grid-template-columns:1fr; }
+  .custo-grid{ grid-template-columns:1fr; }
+  #autora .in{ grid-template-columns:1fr; gap:28px; }
+}
+
 </style>
 </head>
 <body>
