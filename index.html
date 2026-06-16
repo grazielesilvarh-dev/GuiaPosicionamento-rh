@@ -431,59 +431,113 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);line-height:1.8;}
 @media(max-width:480px){
 
   /* ── HERO ── */
-  .hero-nav{ padding:16px 20px; }
-  .hero-nav-brand{ font-size:10px; letter-spacing:2px; }
-  .hero-nav-cta{ padding:7px 14px; font-size:10px; }
+  .hero-nav{ padding:14px 20px; }
+  .hero-nav-brand{ font-size:9px; letter-spacing:2px; }
+  .hero-nav-cta{ padding:8px 16px; font-size:10px; }
 
+  /* texto SEMPRE antes do visual */
   .hero-content{
-    padding:88px 20px 52px;
-    gap:36px;
+    grid-template-columns:1fr !important;
+    padding:76px 20px 48px !important;
+    gap:0 !important;
+    display:flex !important;
+    flex-direction:column !important;
   }
 
-  .hero-badge-pill{ margin-bottom:24px; }
-  .hero-badge-text{ font-size:9px; letter-spacing:1.5px; }
+  /* texto sobe, visual desce */
+  .hero-text{ order:1; }
+  .hero-visual{ order:2; margin-top:40px; }
 
+  .hero-badge-pill{
+    margin-bottom:20px;
+    padding:5px 12px;
+  }
+  .hero-badge-text{ font-size:8px; letter-spacing:1px; }
+  .hero-badge-dot{ width:5px; height:5px; }
+
+  /* headline impactante */
   .hero-gancho-pre{
-    font-size:22px; letter-spacing:-.3px;
+    font-size:clamp(20px,5.5vw,26px);
+    letter-spacing:-.3px; margin-bottom:0;
   }
   .hero-gancho-main{
-    font-size:44px; letter-spacing:-2px;
-  }
-  .hero-gancho-accent{
-    font-size:38px; letter-spacing:-1px;
+    font-size:clamp(52px,14vw,64px);
+    letter-spacing:-3px; line-height:.9;
   }
   .hero-gancho-block{
-    padding:2px 12px 8px;
+    padding:4px 14px 10px; margin-top:6px;
+  }
+  .hero-gancho-accent{
+    font-size:clamp(38px,10vw,50px);
+    letter-spacing:-1.5px;
   }
 
-  .hero-divisor{ margin:20px 0; }
+  .hero-divisor{ margin:18px 0; width:36px; }
 
   .hero-sub-gancho{
-    font-size:14px; line-height:1.75;
-    margin-bottom:28px; max-width:100%;
+    font-size:15px; line-height:1.7;
+    margin-bottom:24px; max-width:100%;
+    color:rgba(255,255,255,.5);
   }
 
-  .hero-price-inline{ margin-bottom:14px; }
-  .hero-price-inline .pval{ font-size:30px; }
+  .hero-price-inline{
+    margin-bottom:16px;
+    align-items:baseline; gap:10px;
+  }
+  .hero-price-inline .pval{ font-size:34px; }
+  .hero-price-inline .pold{ font-size:11px; }
+  .hero-price-inline .ptag{ font-size:9px; }
 
-  .hero-ctas{ flex-direction:column; align-items:flex-start; gap:14px; }
+  .hero-ctas{
+    flex-direction:column;
+    align-items:stretch; gap:12px;
+    width:100%;
+  }
   .hero-cta-main{
     width:100%; text-align:center;
-    padding:16px 24px; font-size:11px;
+    padding:17px 20px; font-size:11px;
+    letter-spacing:1.5px;
   }
-  .hero-cta-sec{ font-size:11px; }
+  .hero-cta-sec{
+    font-size:11px; justify-content:center;
+    color:rgba(255,255,255,.3);
+  }
 
-  .hero-trust{ gap:10px; }
+  .hero-trust{
+    gap:10px; margin-top:4px;
+    justify-content:center;
+  }
   .hero-trust-item{ font-size:9px; }
 
-  /* visual / geo */
-  .hero-visual{ height:260px; }
-  .geo-circle{ width:220px; height:220px; }
-  .geo-glow{ width:180px; height:180px; }
-  .display-frame{ width:130px; border-radius:10px; padding:6px; }
-  .display-bar{ padding:0 2px 5px; }
-  .display-bar-dot{ width:4px; height:4px; }
-  .display-screen{ border-radius:5px; }
+  /* visual menor e elegante */
+  .hero-visual{
+    height:auto !important;
+    display:flex; justify-content:center;
+    position:relative; padding:20px 0 32px;
+  }
+  .geo-circle{
+    width:260px !important; height:260px !important;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    position:absolute;
+  }
+  .geo-glow{
+    width:200px !important; height:200px !important;
+  }
+  .display-frame{
+    width:160px !important;
+    border-radius:12px !important;
+    padding:8px !important;
+    position:relative; z-index:2;
+  }
+  .display-bar{ padding:0 3px 6px !important; }
+  .display-bar-dot{ width:5px !important; height:5px !important; }
+  .display-screen{ border-radius:6px !important; }
+  .display-shadow{
+    width:120px !important;
+    bottom:-12px !important;
+  }
+  .ft1,.ft2,.ft3{ display:none !important; }
 
   /* ── ESPELHO ── */
   #espelho{ padding:56px 20px; }
