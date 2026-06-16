@@ -383,6 +383,65 @@ h1,h2,h3{font-family:"Playfair Display",serif;}
 }
 .ben-body p strong{color:rgba(255,255,255,.7);font-weight:400;}
 
+/* ── DEPOIMENTOS ── */
+#depoimentos{background:var(--areia);padding:88px 24px;}
+#depoimentos .in{max-width:860px;margin:0 auto;}
+#depoimentos .sec-top{text-align:center;margin-bottom:52px;}
+#depoimentos h2{font-size:clamp(24px,3.5vw,38px);color:var(--cafe);line-height:1.2;max-width:520px;margin:10px auto 0;}
+.depo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+@media(max-width:720px){.depo-grid{grid-template-columns:1fr;gap:14px;}}
+.depo-card{
+  background:var(--branco);
+  border-radius:4px;
+  padding:32px 28px;
+  position:relative;
+  border-top:2px solid var(--champ);
+  display:flex;flex-direction:column;justify-content:space-between;
+  gap:24px;
+}
+.depo-aspas{
+  font-family:"Playfair Display",serif;
+  font-size:64px;color:var(--champ);
+  line-height:.6;opacity:.5;
+  margin-bottom:4px;
+}
+.depo-text{
+  font-size:14px;line-height:1.8;
+  color:var(--grafite);font-weight:300;
+  font-style:italic;flex:1;
+}
+.depo-text strong{font-style:normal;font-weight:500;color:var(--cafe);}
+.depo-author{
+  display:flex;flex-direction:column;gap:3px;
+  padding-top:18px;
+  border-top:1px solid rgba(214,191,169,.4);
+}
+.depo-name{
+  font-size:12px;font-weight:500;
+  color:var(--cafe);letter-spacing:.5px;
+}
+.depo-role{
+  font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
+  color:rgba(91,58,41,.4);
+}
+.depo-result{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(111,122,90,.1);
+  border-radius:100px;padding:5px 12px;
+  font-size:10px;letter-spacing:1px;text-transform:uppercase;
+  color:var(--musgo);font-weight:500;margin-top:6px;
+  align-self:flex-start;
+}
+.depo-result::before{content:"✓";font-size:10px;}
+
+/* mobile depoimentos */
+@media(max-width:480px){
+  #depoimentos{padding:56px 20px;}
+  #depoimentos h2{font-size:22px;}
+  .depo-card{padding:24px 20px;}
+  .depo-text{font-size:13px;}
+}
+
 /* ── OFERTA ── */
 
 #oferta{background:var(--cafe);padding:88px 24px;text-align:center;position:relative;overflow:hidden;}
@@ -574,7 +633,66 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);line-height:1.8;}
   .ben-body h3{ font-size:14px; }
   .ben-body p{ font-size:13px; }
 
-  /* ── OFERTA ── */
+  /* ── DEPOIMENTOS ── */
+#depoimentos{background:var(--areia);padding:88px 24px;}
+#depoimentos .in{max-width:860px;margin:0 auto;}
+#depoimentos .sec-top{text-align:center;margin-bottom:52px;}
+#depoimentos h2{font-size:clamp(24px,3.5vw,38px);color:var(--cafe);line-height:1.2;max-width:520px;margin:10px auto 0;}
+.depo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+@media(max-width:720px){.depo-grid{grid-template-columns:1fr;gap:14px;}}
+.depo-card{
+  background:var(--branco);
+  border-radius:4px;
+  padding:32px 28px;
+  position:relative;
+  border-top:2px solid var(--champ);
+  display:flex;flex-direction:column;justify-content:space-between;
+  gap:24px;
+}
+.depo-aspas{
+  font-family:"Playfair Display",serif;
+  font-size:64px;color:var(--champ);
+  line-height:.6;opacity:.5;
+  margin-bottom:4px;
+}
+.depo-text{
+  font-size:14px;line-height:1.8;
+  color:var(--grafite);font-weight:300;
+  font-style:italic;flex:1;
+}
+.depo-text strong{font-style:normal;font-weight:500;color:var(--cafe);}
+.depo-author{
+  display:flex;flex-direction:column;gap:3px;
+  padding-top:18px;
+  border-top:1px solid rgba(214,191,169,.4);
+}
+.depo-name{
+  font-size:12px;font-weight:500;
+  color:var(--cafe);letter-spacing:.5px;
+}
+.depo-role{
+  font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
+  color:rgba(91,58,41,.4);
+}
+.depo-result{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(111,122,90,.1);
+  border-radius:100px;padding:5px 12px;
+  font-size:10px;letter-spacing:1px;text-transform:uppercase;
+  color:var(--musgo);font-weight:500;margin-top:6px;
+  align-self:flex-start;
+}
+.depo-result::before{content:"✓";font-size:10px;}
+
+/* mobile depoimentos */
+@media(max-width:480px){
+  #depoimentos{padding:56px 20px;}
+  #depoimentos h2{font-size:22px;}
+  .depo-card{padding:24px 20px;}
+  .depo-text{font-size:13px;}
+}
+
+/* ── OFERTA ── */
   #oferta{ padding:56px 20px; }
   #oferta h2{ font-size:24px; margin-bottom:20px; }
   .oferta-sub{ font-size:14px; margin-bottom:36px; }
@@ -871,6 +989,61 @@ footer p{font-size:12px;color:rgba(255,255,255,.3);line-height:1.8;}
           <p>Deixar de esperar ser notada e passar a <strong>ocupar os espaços que você já merece — com postura, direção e protagonismo.</strong></p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="in">
+    <div class="sec-top reveal">
+      <span class="label">Quem vive isso fala por si</span>
+      <h2>O que profissionais de RH dizem sobre a jornada de posicionamento</h2>
+    </div>
+    <div class="depo-grid">
+
+      <div class="depo-card reveal">
+        <div>
+          <div class="depo-aspas">"</div>
+          <p class="depo-text">
+            Após ajustes no LinkedIn e uma publicação estratégica sobre um projeto que conduzi, <strong>meu perfil começou a bombar.</strong> Recebi muitas conexões novas de gerentes de RH, visitas e 2 convites para entrevista. <strong>Posicionamento faz muita diferença.</strong>
+          </p>
+        </div>
+        <div class="depo-author">
+          <span class="depo-name">Mentorada · Mentoria Ubuntu</span>
+          <span class="depo-role">Profissional de RH</span>
+          <span class="depo-result">2 convites para entrevista</span>
+        </div>
+      </div>
+
+      <div class="depo-card reveal">
+        <div>
+          <div class="depo-aspas">"</div>
+          <p class="depo-text">
+            Me posicionei com autoridade sobre um processo e <strong>tive um excelente retorno.</strong> Fica a dica: <strong>mudança de postura, visibilidade no que você quer.</strong>
+          </p>
+        </div>
+        <div class="depo-author">
+          <span class="depo-name">Mentorada · Consultoria Ubuntu</span>
+          <span class="depo-role">Profissional de RH</span>
+          <span class="depo-result">Autoridade e retorno imediato</span>
+        </div>
+      </div>
+
+      <div class="depo-card reveal">
+        <div>
+          <div class="depo-aspas">"</div>
+          <p class="depo-text">
+            <strong>Muito obrigada pelo tempo e disponibilidade em dividir tantas estratégias e conhecimento</strong> que nos faz refletir cada vez mais sobre nossa atuação e posicionamento. <strong>Arrasou!</strong>
+          </p>
+        </div>
+        <div class="depo-author">
+          <span class="depo-name">Mentorada · Consultoria Ubuntu</span>
+          <span class="depo-role">Profissional de RH</span>
+          <span class="depo-result">Clareza de posicionamento</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
